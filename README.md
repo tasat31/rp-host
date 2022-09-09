@@ -19,10 +19,18 @@ so Docker is applied for cross compile tool.
 
 ## Get Started
 
+```
+mkdir redpitaya-project
+cd redpitaya-project
+git clone git@github.com:tasat31/rp-host.git
+cd rp-host
+```
+
 **HOST**
 ```
-$ docker build .
-$ docker run -it --rm -v ${PWD}:/src image-id
+$ docker build -t redpitaya .
+$ cd ..
+$ docker run -it --rm -v ${PWD}:/src redpitaya
 
 (In docker)
 # cd /src
